@@ -9,7 +9,6 @@ authenticator = st_auth.Authenticate(
     st.secrets['preauthorized']
 )
 authenticator.login(location='main')
-# Instantiate chat history in session state. This will hold the generated summary.
 if st.session_state["authentication_status"]:
     st.switch_page('pages/Samenvatter.py')
 elif st.session_state["authentication_status"] is False:
