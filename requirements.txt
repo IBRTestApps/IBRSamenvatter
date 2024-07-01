@@ -1,0 +1,5 @@
+streamlit
+streamlit-authenticator
+langchain-core
+langchain-openai
+python-docx
