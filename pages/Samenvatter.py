@@ -69,16 +69,16 @@ with st.expander(label='Instellingen', expanded=True):
     st.slider(label='toon samenvatting', min_value=0.0, max_value=1.0, key='temperature',
               help='de toon van de geproduceerde tekst. lager=zakelijker, hoger=vrijelijker')
 
-#OpenAI model initialisatie
+# OpenAI model initialisatie
 model = ChatOpenAI(model='gpt-4o', temperature=st.session_state['temperature'],
                    max_tokens=st.session_state['max tokens'],
                    api_key=st.secrets['OPENAI_API_KEY'],
                    organization=st.secrets['OPENAI_ORG_ID'])
 
-#Geüpload bestand
+# Geüpload bestand
 uploaded_file_text = get_docx_text(uploaded_file)
 
-#Weergave brontekst
+# Weergave brontekst
 with st.expander(label='Te samenvatten tekst', expanded=False):
     st.write(uploaded_file_text)
 st.text_area(label='prompt', placeholder='Voer hier uw instructies voor de samenvatting in', key='gebruikersprompt')
