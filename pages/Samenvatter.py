@@ -58,7 +58,7 @@ def response_func():
 
 
 st.title('IBR AI Samenvatter voor Jurisprudentie')
-st.header('Welkom, Rick')
+st.header('Welkom')
 st.divider()
 uploaded_file = st.file_uploader(label='upload een bestand', type=['docx'], key='uploaded file',
                                  help='upload een .docx bestand')
